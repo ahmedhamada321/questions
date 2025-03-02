@@ -1,0 +1,25 @@
+{
+    "title": "PentaValue Survey",
+    "description": "Please answer the following questions.",
+    "logo": "https://c.smartrecruiters.com/sr-company-logo-prod-aws-dc5/5f3e349418b35c3a23364e0a/huge?r=s3-eu-central-1&_1597919308842",
+    "logoWidth": "200px",
+    "logoHeight": "50px",
+    "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          { "type": "text", "name": "name", "title": "What is your name?", "isRequired": true },
+          { "type": "radiogroup", "name": "gender", "title": "Gender:", "choices": ["Male", "Female", "Other"] },
+          { "type": "dropdown", "name": "age", "title": "Age:", "choices": ["<18", "18-25", "25-40", "40+"] },
+          { "type": "checkbox", "name": "hobbies", "title": "Select your hobbies:", "choices": ["Reading", "Traveling", "Sports", "Gaming"] },
+          { "type": "boolean", "name": "subscribe", "title": "Would you like to subscribe to our newsletter?" },
+          { "type": "file", "name": "resume", "title": "Upload your resume:" },
+          { "type": "rating", "name": "satisfaction", "title": "Rate your satisfaction level:", "rateMax": 5 },
+          { "type": "matrix", "name": "experience", "title": "Rate your experience in different areas:", "columns": ["Poor", "Average", "Good", "Excellent"], "rows": ["Customer Service", "Product Quality", "Pricing"] },
+          { "type": "ranking", "name": "priorities", "title": "Rank these based on importance:", "choices": ["Price", "Quality", "Brand Reputation", "Customer Service"] },
+          { "type": "comment", "name": "feedback", "title": "Any additional feedback?" }
+        ]
+      }
+    ]
+  }
+  
