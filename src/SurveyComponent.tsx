@@ -36,4 +36,3 @@ const SurveyComponent = () => {
 };
 
 export default SurveyComponent;
-s;
