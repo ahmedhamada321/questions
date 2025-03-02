@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
@@ -13,10 +13,7 @@ const SurveyComponent = () => {
       .catch((error) => console.error("Error loading survey:", error));
   }, []);
 
-  if (!surveyJson)
-    return (
-      <div style={{ textAlign: "center", paddingTop: "50px" }}>Loading...</div>
-    );
+  if (!surveyJson) return <div>Loading...</div>;
 
   const survey = new Model(surveyJson);
   survey.onComplete.add((s) => console.log("Survey Results:", s.data));
@@ -27,16 +24,16 @@ const SurveyComponent = () => {
         width: "100vw",
         height: "100vh",
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#f8f9fa",
-        padding: "20px",
       }}
     >
-      <Survey model={survey} />
+      <div style={{ width: "80%", maxWidth: "800px", overflowY: "auto" }}>
+        <Survey model={survey} />
+      </div>
     </div>
   );
 };
 
 export default SurveyComponent;
+s;
